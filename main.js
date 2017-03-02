@@ -8,7 +8,7 @@ require.config({
 
 require(['jquery','components/window'],($,w) => {
 
-  $('#a').click(function(event) {
+  $('#alert').click(function(event) {
     new w.Window().alert({
       title: '提示',
       content: 'welcome!',
@@ -20,7 +20,7 @@ require(['jquery','components/window'],($,w) => {
       },
       width: 300,
       height: 150,
-      y: 50,
+      y: 140,
       hasCloseBtn: true,
       skinClassName: 'window_skin_a',
       textAlertBtn: 'OK',
@@ -28,7 +28,7 @@ require(['jquery','components/window'],($,w) => {
     })
   })
 
-  $('#b').click(function(event) {
+  $('#confirm').click(function(event) {
     new w.Window().confirm({
       title: '系统消息',
       content: '您确定要删除这个文件吗',
@@ -40,12 +40,12 @@ require(['jquery','components/window'],($,w) => {
       },
       width: 300,
       height: 150,
-      y: 50,
+      y: 140,
       dragHandle: '.window_header'
     })
-  });
+  })
 
-  $('#c').click(function(event) {
+  $('#prompt').click(function(event) {
     new w.Window().prompt({
       title: '请输入你的名字',
       content: '我们将会为您保密您输入的信息',
@@ -59,8 +59,9 @@ require(['jquery','components/window'],($,w) => {
       },
       width: 300,
       height: 150,
-      y: 50,
+      y: 140,
       dragHandle: '.window_header'
     })
-  });
+  })
+
 })
